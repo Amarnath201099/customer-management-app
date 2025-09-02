@@ -1,0 +1,214 @@
+/* styles.css */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f8f9fa;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  margin: 5px 0;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+input {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  padding: 8px 12px;
+  margin-top: 10px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+button:disabled {
+  background-color: #d6d6d6;
+  color: #888888;
+  cursor: not-allowed;
+  border: none;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+table,
+th,
+td {
+  border: 1px solid #ccc;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+}
+
+.active-link {
+  color: #b388ff !important;
+  font-weight: 600;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* CustomerListPage Styles */
+
+.customer-page-container {
+  min-height: 90vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.pagination-btn {
+  background-color: #0d6efd;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-btn:hover {
+  background-color: #0b5ed7;
+}
+
+/* CustomerList */
+
+.view-btn {
+  background-color: #2ecc71;
+  color: #ffffff;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.view-btn:hover {
+  transform: scale(1.03);
+}
+
+.edit-btn {
+  background-color: #facc15;
+  color: #ffffff;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+}
+
+.edit-btn:hover {
+  transform: scale(1.03);
+}
+
+.add-btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  margin-top: 40px;
+  transition: transform 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: scale(1.03);
+}
+
+.navbar-brand {
+  color: #b388ff !important;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/* CustomerDetailPage */
+
+.customer-detail-container {
+  min-height: 82vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+/* AddressList */
+
+.address-list-style {
+  border-radius: 5px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+/* CustomerFormPage */
+
+.customer-form-container {
+  min-height: 82vh;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  /* CustomerListPage Styles */
+
+  .customer-page-container {
+    margin: 30px 40px !important;
+  }
+
+  .container-fluid {
+    margin: 10px 40px !important;
+  }
+
+  .customer-form-container {
+    margin: 10px 40px !important;
+  }
+
+  .customer-detail-container {
+    margin: 10px 40px !important;
+  }
+
+  .navbar-brand {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* CustomerListPage Styles */
+
+  .customer-page-container {
+    margin: 40px 60px !important;
+  }
+
+  .container-fluid {
+    margin: 10px 60px !important;
+  }
+
+  .customer-form-container {
+    margin: 10px 60px !important;
+  }
+
+  .customer-detail-container {
+    margin: 10px 60px !important;
+  }
+
+  .navbar-brand {
+    font-size: 28px;
+  }
+}

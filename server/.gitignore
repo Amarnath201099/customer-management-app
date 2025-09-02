@@ -1,5 +1,0 @@
-# Node modules (for Node.js projects)
-node_modules/
-
-# Environment variables
-.env
