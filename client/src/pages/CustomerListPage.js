@@ -6,6 +6,7 @@ const API_BASE_URL =
   process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
 
 function CustomerListPage() {
+  const [loading, setLoading] = useState(false);
   const [customers, setCustomers] = useState([]);
   const [search, setSearch] = useState("");
   const [city, setCity] = useState("");
@@ -16,6 +17,7 @@ function CustomerListPage() {
   const limit = 5;
 
   useEffect(() => {
+    setLoading(true);
     fetchCustomers();
   }, [search, city, state, pinCode, page]);
 
@@ -35,6 +37,8 @@ function CustomerListPage() {
       setTotal(res.data.total);
     } catch (error) {
       console.error("Error fetching customers", error);
+    } finally {
+      setLoading(false);
     }
   }
 
@@ -94,7 +98,15 @@ function CustomerListPage() {
         </button>
       </div>
 
-      <CustomerList customers={customers} />
+      {loading ? (
+        <div className="text-center mt-2">
+          <div className="spinner-border text-secondary" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+      ) : (
+        <CustomerList customers={customers} />
+      )}
 
       <div className="align-self-center mt-auto">
         <button
