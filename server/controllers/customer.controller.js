@@ -38,13 +38,14 @@ exports.getAllCustomers = async (req, res) => {
   if (search) {
     const likeSearch = `%${search.toLowerCase()}%`;
     whereClauses.push(`
-      (
-        LOWER(customers.first_name) LIKE ? OR
-        LOWER(customers.last_name) LIKE ? OR
-        LOWER(customers.phone_number) LIKE ?
-      )
-    `);
-    params.push(likeSearch, likeSearch, likeSearch);
+    (
+      LOWER(customers.first_name) LIKE ? OR
+      LOWER(customers.last_name) LIKE ? OR
+      LOWER(customers.phone_number) LIKE ? OR
+      LOWER(customers.first_name || ' ' || customers.last_name) LIKE ?
+    )
+  `);
+    params.push(likeSearch, likeSearch, likeSearch, likeSearch);
   }
 
   // Filter from address table

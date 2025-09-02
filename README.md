@@ -6,8 +6,8 @@ A full-stack web application for managing customers and their multiple addresses
 
 ## 🌐 Live Demo Links
 
-- 🔗 **Frontend (Vercel):** [https://your-vercel-link.vercel.app](https://your-vercel-link.vercel.app)
-- 🔗 **Backend (Render):** [https://your-render-backend-url.onrender.com](https://your-render-backend-url.onrender.com)
+- 🔗 **Frontend (Vercel):** [https://customer-management-app-jade.vercel.app/](https://customer-management-app-jade.vercel.app/)
+- 🔗 **Backend (Render):** [https://customer-management-app-q3ok.onrender.com](https://customer-management-app-q3ok.onrender.com)
 
 ---
 
