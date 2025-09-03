@@ -22,7 +22,6 @@ function CustomerDetailPage() {
   async function fetchCustomer() {
     try {
       const res = await axios.get(`${API_BASE_URL}/api/customers/${id}`);
-      console.log(res.data);
       setCustomer(res.data);
     } catch (error) {
       console.error("Failed to fetch customer", error);
@@ -35,7 +34,6 @@ function CustomerDetailPage() {
         `${API_BASE_URL}/api/customers/${id}/addresses`
       );
       setAddresses(res.data.data);
-      console.log(res.data);
     } catch (error) {
       console.error("Failed to fetch addresses", error);
     }

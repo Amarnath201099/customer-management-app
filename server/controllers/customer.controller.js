@@ -60,8 +60,8 @@ exports.getAllCustomers = async (req, res) => {
   }
 
   if (pin_code) {
-    whereClauses.push("addresses.pin_code = ?");
-    params.push(pin_code);
+    whereClauses.push("addresses.pin_code LIKE ?");
+    params.push(`%${pin_code}%`);
   }
 
   if (address_details) {
