@@ -48,6 +48,7 @@ customer-management-app/
 │ └── package.json
 ├── server/ # Express backend
 │ ├── controllers/
+│ ├── routes/
 │ ├── db/
 │ └── index.js
 └── README.md
