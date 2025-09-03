@@ -54,7 +54,14 @@ function CustomerDetailPage() {
     }
   }
 
-  if (!customer) return <p>Loading customer...</p>;
+  if (!customer)
+    return (
+      <div className="text-center mt-5">
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    );
 
   return (
     <div className="customer-detail-container p-4 m-4">
