@@ -42,7 +42,7 @@ function CustomerDetailPage() {
   async function handleDeleteCustomer() {
     if (window.confirm("Are you sure you want to delete this customer?")) {
       try {
-        await axios.delete(`http://localhost:5000/api/customers/${id}`);
+        await axios.delete(`${API_BASE_URL}/api/customers/${id}`);
         alert("Customer deleted");
         navigate("/");
       } catch (error) {
